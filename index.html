@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday Keyla!</title>
+
+    <!-- Mengambil font estetik dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- PEMUTAR MUSIK -->
+    <!-- Catatan: Ganti 'assets/music.mp3' dengan file lagu romantis pilihanmu -->
+    <div class="music-box" id="musicControl">
+        <span id="musicStatus">🎵 Putar Musik</span>
+        <audio id="lagu" loop>
+            <source src="assets/bg-music.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <!-- CONTAINER UTAMA SLIDE -->
+    <div class="container">
+
+        <!-- SLIDE 1: PEMBUKA -->
+        <section class="slide active">
+            <div class="content">
+                <h1 class="animate-text">
+                    Happy 20th Birthday,<br>
+                    <span>Keyla Yunto Ferens</span> ❤️
+                </h1>
+                <p>Scroll ke bawah atau gunakan tombol navigasi</p>
+            </div>
+        </section>
+
+        <!-- SLIDE 2: UCAPAN UTAMA -->
+        <section class="slide">
+            <div class="content">
+                <h2 class="title">Untukmu, Keyla...</h2>
+                <p class="long-text">
+                    "Selamat ulang tahun yang ke-20, Keyla. Terima kasih sudah hadir dalam hidupku.
+                    Semoga di usia yang baru ini kamu selalu diberi kesehatan, kebahagiaan,
+                    dan dikelilingi oleh orang-orang yang menyayangimu."
+                </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 3: ALASAN BERSYUKUR -->
+        <section class="slide">
+            <div class="content">
+                <h2 class="title">Kenapa Aku Bersyukur...</h2>
+                <ul class="reasons-list">
+                    <li class="reason">Ketulusan hatimu yang tak pernah luntur.</li>
+                    <li class="reason">Caramu tersenyum di saat-saat tersulit.</li>
+                    <li class="reason">Dukunganmu yang selalu membuatku merasa berharga.</li>
+                    <li class="reason">Kehangatan yang kamu bawa di setiap pertemuan kita.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SLIDE 4: HARAPAN MASA DEPAN -->
+        <section class="slide">
+            <div class="content">
+                <h2 class="title">Harapanku Kita...</h2>
+                <p class="romantic-text">
+                    "Aku berharap kita bisa terus tumbuh bersama, melewati setiap musim kehidupan
+                    dengan tangan yang saling menggenggam. Aku ingin menjadi tempatmu pulang,
+                    saksi dari setiap mimpimu yang menjadi nyata."
+                </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 5: GALERI FOTO -->
+        <section class="slide">
+            <div class="content">
+                <h2 class="title">Momen Indah Kita</h2>
+
+                <div class="gallery">
+                    <!-- Ganti dengan foto kalian -->
+                    <div class="photo">
+                        <img src="assets/photos/foto1.jpg" alt="Kenangan 1">
+                    </div>
+
+                    <div class="photo">
+                        <img src="assets/photos/foto2.jpg" alt="Kenangan 2">
+                    </div>
+
+                    <div class="photo">
+                        <img src="assets/photos/foto3.jpg" alt="Kenangan 3">
+                    </div>
+                </div>
+
+                <p style="font-size: 0.8rem; opacity: 0.6;">
+                    (Ganti gambar di file HTML pada bagian Slide 5)
+                </p>
+            </div>
+        </section>
+
+        <!-- SLIDE 6: KUTIPAN ROMANTIS -->
+        <section class="slide">
+            <div class="content">
+                <div class="quote-card">
+                    <p>
+                        "Love is not about how many days, months, or years you have been together.
+                        Love is about how much you love each other every single day."
+                    </p>
+
+                    <span>— Forever & Always —</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 7: 20 WISHES -->
+        <section class="slide">
+            <div class="content">
+                <h2 class="title">20 Wishes for Keyla</h2>
+
+                <div class="wishes-grid">
+                    <div class="wish">1. Selalu Bahagia</div>
+                    <div class="wish">2. Sehat Selalu</div>
+                    <div class="wish">3. Makin Dewasa</div>
+                    <div class="wish">4. Cita-cita Tercapai</div>
+                    <div class="wish">5. Selalu Sabar</div>
+                    <div class="wish">6. Rezeki Lancar</div>
+                    <div class="wish">7. Jadi Kebanggaan</div>
+                    <div class="wish">8. Banyak Senyum</div>
+                    <div class="wish">9. Hati yang Tenang</div>
+                    <div class="wish">10. Selalu Bersyukur</div>
+                    <div class="wish">11. Makin Cantik</div>
+                    <div class="wish">12. Selalu Beruntung</div>
+                    <div class="wish">13. Tidur yang Cukup</div>
+                    <div class="wish">14. Kurangi Sedih</div>
+                    <div class="wish">15. Semangat Terus</div>
+                    <div class="wish">16. Disayang Semua</div>
+                    <div class="wish">17. Makin Hebat</div>
+                    <div class="wish">18. Tetap Rendah Hati</div>
+                    <div class="wish">19. Selalu Aman</div>
+                    <div class="wish">20. Cinta Kita Awet</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SLIDE 8: PENUTUP -->
+        <section class="slide" id="lastSlide">
+            <div class="content">
+                <h1 class="final-text">
+                    "Terima kasih sudah menjadi bagian terindah dalam hidupku."
+                </h1>
+
+                <h2 class="final-wish">
+                    Happy Birthday, Keyla. <br>
+                    I love you ❤️
+                </h2>
+            </div>
+        </section>
+
+        <!-- NAVIGASI -->
+        <div class="nav-btns">
+            <button id="prevBtn">Kembali</button>
+
+            <div class="indicator">
+                <span id="activeIdx">1</span> / 8
+            </div>
+
+            <button id="nextBtn">Lanjut</button>
+        </div>
+
+    </div>
+
+    <!-- Library Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

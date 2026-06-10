@@ -1,0 +1,230 @@
+/* PENGATURAN WARNA DAN FONT */
+:root {
+    --pink-muda: #FFD1DC;
+    --putih: #FFFFFF;
+    --cream: #FFFDD0;
+    --pink-tua: #FF8A80;
+    --text: #5D4037;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--cream);
+    color: var(--text);
+    overflow: hidden;
+}
+
+/* CONTAINER SLIDE */
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* SUDAH DIPERBAIKI */
+    background: linear-gradient(
+        135deg,
+        var(--putih) 0%,
+        var(--pink-muda) 100%
+    );
+}
+
+/* Slide yang sedang aktif */
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.content {
+    max-width: 800px;
+}
+
+/* TIPOGRAFI */
+h1,
+h2.title {
+    font-family: 'Playfair Display', serif;
+    color: var(--pink-tua);
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+}
+
+.animate-text {
+    animation: softFloat 3s ease-in-out infinite;
+}
+
+.long-text,
+.romantic-text {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* LIST ALASAN */
+.reasons-list li {
+    list-style: none;
+    background: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 0.5s;
+}
+
+.reasons-list li.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* GALERI FOTO */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.photo {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transform: rotate(-3deg);
+    transition: 0.3s;
+}
+
+.photo:nth-child(even) {
+    transform: rotate(3deg);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+}
+
+/* WISHES GRID */
+.wishes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.wish {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    border: 1px solid var(--pink-muda);
+}
+
+/* NAVIGASI */
+.nav-btns {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 100;
+}
+
+button {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--pink-muda);
+    color: var(--pink-tua);
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--pink-tua);
+    color: white;
+}
+
+.indicator {
+    font-weight: 600;
+    color: var(--pink-tua);
+}
+
+/* MUSIC BOX */
+.music-box {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    font-size: 0.9rem;
+}
+
+/* ANIMASI */
+@keyframes softFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.final-wish {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    color: var(--pink-tua);
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 600px) {
+    .wishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        gap: 0.5rem;
+    }
+
+    .photo {
+        width: 140px;
+    }
+
+    .nav-btns {
+        width: 90%;
+        justify-content: space-between;
+        gap: 0.5rem;
+    }
+}
